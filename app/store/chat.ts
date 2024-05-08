@@ -313,7 +313,7 @@ export const useChatStore = createPersistStore(
         const modelConfig = session.mask.modelConfig;
 
         const userContent = fillTemplateWith(content, modelConfig);
-        console.log("[User Input] after template: ", userContent);
+        console.log("[User Input] after template:  ", userContent);
 
         let mContent: string | MultimodalContent[] = userContent;
 
