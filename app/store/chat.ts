@@ -342,7 +342,7 @@ export const useChatStore = createPersistStore(
 
         const botMessage: ChatMessage = createMessage({
           role: "assistant",
-          streaming: false,
+          streaming: true,
           model: modelConfig.model,
         });
 
@@ -377,7 +377,7 @@ export const useChatStore = createPersistStore(
           messages: sendMessages,
           config: { ...modelConfig, stream: false },
           onUpdate(message) {
-            botMessage.streaming = false;
+            botMessage.streaming = true;
             if (message) {
               botMessage.content = message;
             }
